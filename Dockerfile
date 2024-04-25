@@ -14,7 +14,3 @@ RUN git clone --branch 8.x-3.x --single-branch --depth 1 https://git.drupalcode.
 
 WORKDIR /var/www/html/modules
 RUN git clone --branch 8.x-1.x --single-branch --depth 1 https://git.drupalcode.org/project/token.git
-
-# Установка дополнительных модулей и тем через Drush
-WORKDIR /var/www/html
-RUN drush en -y bootstrap token
