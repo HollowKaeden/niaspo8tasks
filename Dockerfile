@@ -1,0 +1,1 @@
+FROM couchbase/server:community

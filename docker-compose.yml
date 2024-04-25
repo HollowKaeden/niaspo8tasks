@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  couchbase:
+    build: .
+    ports:
+      - "8091:8091"  # Порт для административной консоли
+      - "8092:8092"  # Порт для доступа к кластеру
+      - "11210:11210"  # Порт для взаимодействия с кластером
+    environment:
+      - COUCHBASE_ADMINISTRATOR_USERNAME=admin
+      - COUCHBASE_ADMINISTRATOR_PASSWORD=password
