@@ -1,12 +1,12 @@
 version: "3.8"
 services:
     server:
-        build: server/
+        build: Dockerfile_client
         command: node ./server.js
         ports:
         - 1234:1234
     client:
-        build: client/
+        build: Dockerfile_server
         command: node ./client.js
         network_mode: host
         depends_on:
