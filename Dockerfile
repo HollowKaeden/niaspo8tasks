@@ -18,9 +18,3 @@ RUN git clone --branch 8.x-1.x --single-branch --depth 1 https://git.drupalcode.
 # Установка дополнительных модулей и тем через Drush
 WORKDIR /var/www/html
 RUN drush en -y bootstrap token
-
-# Опционально: копирование дополнительных файлов и папок
-COPY custom_module /var/www/html/modules/custom_module
-
-# Опционально: установка конфигурации или других настроек
-COPY settings.php /var/www/html/sites/default/settings.php
